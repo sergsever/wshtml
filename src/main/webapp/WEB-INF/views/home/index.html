@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Index html</title>
@@ -7,20 +7,50 @@
 </head>
 <body>
 <header>
-    <div class="logo">
+    <div class="header_block">
+    <div>
+    <img src="resources/images/Logo.jpg" class="logo">
+    </div>
+        <span>HTML and CSS.</span>
+
     </div>
 </header>
 <div class="main">
 <h1>Semantic markup</h1>
-    <p>Jon Duckett:</p>
+    <p>
+    <img src="resources/images/Duckett.png" alt="Duckett" class="logo"/>
+    Jon Duckett:</p>
     <blockquote>
         There are some <b>text</b> elements that are not intended to affect the
         structure of your web pages, but they do add extra information to the
         pages — they are known as semantic markup.
     </blockquote>
+    <h2>A Definitions List</h2>
+    <dl>
+        <dt>First</dt>
+        <dd>Первый.</dd>
+        <dt>Second</dt>
+        <dd>Второй.</dd>
+        <dt>Third</dt>
+        <dd>Третий.</dd>
+    </dl>
+
+    <form method="post" action="upload" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><form:label path="file">Select a file to upload</form:label></td>
+                <td><input type="file" name="file" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+        </form>
 </div>
 <footer>
-    <p>Footer</p>
+    <address>
+        <p><a href="mailto:sergey.lvov70@gmail.com">sergey.lvov70@gmail.com</a>Сергей Львов.</p>
+    </address>
 </footer>
 </body>
 </html>

@@ -21,7 +21,7 @@ public class AccountController {
     @ResponseStatus(value = HttpStatus.OK)
     @Secured({"ROLE_USER", "ROLE_ADMIN"})
     public Account currentAccount(Principal principal) {
-        Assert.notNull(principal);
+        Assert.notNull(principal, "the principal is null.");
         return accountRepository.findOneByEmail(principal.getName());
     }
 

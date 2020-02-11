@@ -3,10 +3,13 @@ package com.lvov.home;
 import java.security.Principal;
 
 import org.springframework.core.SpringVersion;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 class HomeController {
@@ -19,9 +22,7 @@ class HomeController {
 	@GetMapping("/")
 	String index(Principal principal, Model model) {
 		return "home/index";
-/*
-		model.addAttribute("springVersion", SpringVersion.getVersion());
-		return principal != null ? "home/homeSignedIn" : "home/homeNotSignedIn";
-*/
 	}
+
+
 }
